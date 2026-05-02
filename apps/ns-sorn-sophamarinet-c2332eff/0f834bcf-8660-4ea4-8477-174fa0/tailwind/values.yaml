@@ -3,15 +3,15 @@ app:
   userId: "0f834bcf-8660-4ea4-8477-174fa0"
   projectName: "tailwind"
   namespace: "ns-sorn-sophamarinet-c2332eff"
-  framework: "nodejs"
-  containerPort: 3000
+  framework: "tailwind-static"
+  containerPort: 80
   servicePort: 80
   domain: "autonomous-istad.com"
   host: "tailwind-ns-sorn-sophamarinet-c2332eff.autonomous-istad.com" # managed-by-jenkins-host
 
 image:
   repository: "harbor.devith.it.com/deployment-pipeline/0f834bcf-8660-4ea4-8477-174fa0/tailwind"
-  tag: "0f834bcf-8660-4ea4-8477-174fa0-47-56d3cd3a8c04" # managed-by-jenkins-image-tag
+  tag: "0f834bcf-8660-4ea4-8477-174fa0-50-56d3cd3a8c04" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
