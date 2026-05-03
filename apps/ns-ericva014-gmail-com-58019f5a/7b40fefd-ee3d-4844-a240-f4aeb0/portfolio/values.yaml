@@ -3,15 +3,15 @@ app:
   userId: "7b40fefd-ee3d-4844-a240-f4aeb0"
   projectName: "portfolio"
   namespace: "ns-ericva014-gmail-com-58019f5a"
-  framework: "react"
-  containerPort: 80
+  framework: "nodejs"
+  containerPort: 3000
   servicePort: 80
   domain: "autonomous-istad.com"
   host: "portfolio-ns-ericva014-gmail-com-58019f5a.autonomous-istad.com" # managed-by-jenkins-host
 
 image:
   repository: "harbor.devith.it.com/deployment-pipeline/7b40fefd-ee3d-4844-a240-f4aeb0/portfolio"
-  tag: "7b40fefd-ee3d-4844-a240-f4aeb0-52-ffa2615d09a3" # managed-by-jenkins-image-tag
+  tag: "7b40fefd-ee3d-4844-a240-f4aeb0-54-aa9a7839eb05" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
