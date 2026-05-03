@@ -1,0 +1,67 @@
+app:
+  name: "homeworkhtml"
+  userId: "7b40fefd-ee3d-4844-a240-f4aeb0"
+  projectName: "homeworkhtml"
+  namespace: "ns-ericva014-gmail-com-58019f5a"
+  framework: "static"
+  containerPort: 80
+  servicePort: 80
+  domain: "autonomous-istad.com"
+  host: "homeworkhtml-ns-ericva014-gmail-com-58019f5a.autonomous-istad.com" # managed-by-jenkins-host
+
+image:
+  repository: "harbor.devith.it.com/deployment-pipeline/7b40fefd-ee3d-4844-a240-f4aeb0/homeworkhtml"
+  tag: "7b40fefd-ee3d-4844-a240-f4aeb0-60-891836e69eb0" # managed-by-jenkins-image-tag
+  pullPolicy: "IfNotPresent"
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  tls:
+    enabled: true
+    secretName: "homeworkhtml-tls"
+
+imagePullSecrets:
+  - name: "registry-secret"
+
+envJson: |
+  []
+
+probes:
+  mode: "http"
+  startup:
+    enabled: false
+    path: "/"
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    failureThreshold: 24
+  readiness:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    failureThreshold: 3
+  liveness:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 30
+    periodSeconds: 15
+    failureThreshold: 3
