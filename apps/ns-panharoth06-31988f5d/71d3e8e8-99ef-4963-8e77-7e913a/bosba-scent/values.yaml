@@ -1,0 +1,67 @@
+app:
+  name: "bosba-scent"
+  userId: "71d3e8e8-99ef-4963-8e77-7e913a"
+  projectName: "bosba-scent"
+  namespace: "ns-panharoth06-31988f5d"
+  framework: "nextjs"
+  containerPort: 3000
+  servicePort: 80
+  domain: "autonomous-istad.com"
+  host: "bosba-scent-ns-panharoth06-31988f5d.autonomous-istad.com" # managed-by-jenkins-host
+
+image:
+  repository: "harbor.devith.it.com/deployment-pipeline/71d3e8e8-99ef-4963-8e77-7e913a/bosba-scent"
+  tag: "71d3e8e8-99ef-4963-8e77-7e913a-78-7fa9628b8054" # managed-by-jenkins-image-tag
+  pullPolicy: "IfNotPresent"
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  tls:
+    enabled: true
+    secretName: "bosba-scent-tls"
+
+imagePullSecrets:
+  - name: "registry-secret"
+
+envJson: |
+  []
+
+probes:
+  mode: "http"
+  startup:
+    enabled: false
+    path: "/"
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    failureThreshold: 24
+  readiness:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    failureThreshold: 3
+  liveness:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 30
+    periodSeconds: 15
+    failureThreshold: 3
