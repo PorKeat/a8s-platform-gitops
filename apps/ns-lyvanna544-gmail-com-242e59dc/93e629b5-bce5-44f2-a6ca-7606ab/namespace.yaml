@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ns-lyvanna544-gmail-com-242e59dc
+  labels:
+    app.kubernetes.io/managed-by: argocd
+    platform.devops/workspace-namespace: "true"
