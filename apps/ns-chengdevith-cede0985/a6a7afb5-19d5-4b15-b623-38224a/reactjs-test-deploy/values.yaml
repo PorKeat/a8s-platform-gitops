@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "gohabor.anajak-khmer.site/deployment-pipeline/a6a7afb5-19d5-4b15-b623-38224a/reactjs-test-deploy"
-  tag: "reactjs-test-deploy-c8c47138" # managed-by-jenkins-image-tag
+  tag: "reactjs-test-deploy-d6ad89fd" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
