@@ -7,11 +7,11 @@ app:
   containerPort: 80
   servicePort: 80
   domain: "autonomous-istad.com"
-  host: "react-itp.autonomous-istad.com" # managed-by-jenkins-host
+  host: "reactjs-devops-demo-ns-porkeat-c18c6214.autonomous-istad.com" # managed-by-jenkins-host
 
 image:
   repository: "gohabor.anajak-khmer.site/deployment-pipeline/64780181-e021-45be-9fe0-9dda0c/reactjs-devops-demo"
-  tag: "reactjs-devops-demo-d3a50a9e" # managed-by-jenkins-image-tag
+  tag: "reactjs-devops-demo-7dc817c4" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
