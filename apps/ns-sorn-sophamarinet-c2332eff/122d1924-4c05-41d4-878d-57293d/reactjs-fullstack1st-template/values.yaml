@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "gohabor.anajak-khmer.site/deployment-pipeline/122d1924-4c05-41d4-878d-57293d/reactjs-fullstack1st-template"
-  tag: "reactjs-fullstack1st-template-84b09af3" # managed-by-jenkins-image-tag
+  tag: "reactjs-fullstack1st-template-9342d74d" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
