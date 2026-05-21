@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "gohabor.anajak-khmer.site/deployment-pipeline/8737e41a-8b74-4136-aa2b-1bd8cf/reactjs-devops-demo"
-  tag: "reactjs-devops-demo-671bb60b" # managed-by-jenkins-image-tag
+  tag: "reactjs-devops-demo-246ab47a" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
