@@ -1,0 +1,67 @@
+app:
+  name: "pre-university"
+  userId: "37209fb2-07cb-4cbb-b447-6e720f"
+  projectName: "pre-university"
+  namespace: "ns-sorn-sophamarinet-c2332eff"
+  framework: "static"
+  containerPort: 80
+  servicePort: 80
+  domain: "autonomous-istad.com"
+  host: "pre-university-ns-sorn-sophamarinet-c2332eff.autonomous-istad.com" # managed-by-jenkins-host
+
+image:
+  repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/37209fb2-07cb-4cbb-b447-6e720f/pre-university"
+  tag: "pre-university-490f25a6" # managed-by-jenkins-image-tag
+  pullPolicy: "IfNotPresent"
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  tls:
+    enabled: true
+    secretName: "pre-university-tls"
+
+imagePullSecrets:
+  - name: "registry-secret"
+
+envJson: |
+  []
+
+probes:
+  mode: "http"
+  startup:
+    enabled: false
+    path: "/"
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    failureThreshold: 24
+  readiness:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    failureThreshold: 3
+  liveness:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 30
+    periodSeconds: 15
+    failureThreshold: 3
