@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ns-pisethmao-2d683c12
+  labels:
+    app.kubernetes.io/managed-by: argocd
+    platform.devops/workspace-namespace: "true"
