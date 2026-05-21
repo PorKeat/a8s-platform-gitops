@@ -3,15 +3,15 @@ app:
   userId: "73d4ebe5-240c-48c6-be7b-47e163"
   projectName: "template-nextjs"
   namespace: "ns-tochratana-963a758e"
-  framework: "nextjs"
-  containerPort: 3000
+  framework: "tailwind-static"
+  containerPort: 80
   servicePort: 80
   domain: "autonomous-istad.com"
   host: "template-nextjs-ns-tochratana-963a758e.autonomous-istad.com" # managed-by-jenkins-host
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/73d4ebe5-240c-48c6-be7b-47e163/template-nextjs"
-  tag: "template-nextjs-a5f36c51" # managed-by-jenkins-image-tag
+  tag: "template-nextjs-9feb9bf8" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
