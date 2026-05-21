@@ -10,8 +10,8 @@ app:
   host: "reactjs-devops-demo-ns-porkeat-c18c6214.autonomous-istad.com" # managed-by-jenkins-host
 
 image:
-  repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/8737e41a-8b74-4136-aa2b-1bd8cf/reactjs-devops-demo"
-  tag: "reactjs-devops-demo-0b497dd0" # managed-by-jenkins-image-tag
+  repository: "gohabor.anajak-khmer.site/deployment-pipeline/8737e41a-8b74-4136-aa2b-1bd8cf/reactjs-devops-demo"
+  tag: "reactjs-devops-demo-671bb60b" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
