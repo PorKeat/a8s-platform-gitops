@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/3e05dac2-6032-4985-a06f-5cec99/reactjs-testing"
-  tag: "reactjs-testing-66e850e9" # managed-by-jenkins-image-tag
+  tag: "reactjs-testing-59100162" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
