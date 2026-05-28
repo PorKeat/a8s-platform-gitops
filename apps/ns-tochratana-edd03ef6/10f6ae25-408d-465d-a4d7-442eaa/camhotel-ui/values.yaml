@@ -46,10 +46,10 @@ envJson: |
   [{"name":"NEXT_PUBLIC_API","value":"","secret":true}]
 
 vault:
-  enabled: false
+  enabled: true
   secretStoreName: "vault-backend"
   secretStoreKind: "ClusterSecretStore"
-  envPath: ""
+  envPath: "monolithic/ns-tochratana-edd03ef6/aeb55371-4379-415e-a157-153eb4376180/env"
 
 probes:
   mode: "http"
