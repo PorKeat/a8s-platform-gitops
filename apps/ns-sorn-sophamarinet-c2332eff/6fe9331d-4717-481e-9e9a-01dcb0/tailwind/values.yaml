@@ -7,7 +7,7 @@ app:
   containerPort: 80
   servicePort: 80
   domain: "autonomous-istad.com"
-  host: "tailwind-ns-sorn-sophamarinet-c2332eff.autonomous-istad.com" # managed-by-jenkins-host
+  host: "tailwind.autonomous-istad.com" # managed-by-jenkins-host
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/6fe9331d-4717-481e-9e9a-01dcb0/tailwind"
