@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/cfb73df5-b1e6-4a8b-a54b-72890d/yarn-project"
-  tag: "yarn-project-48a3cc61" # managed-by-jenkins-image-tag
+  tag: "yarn-project-4070eb94" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
