@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/28cdfd36-7ffe-4491-83f3-0e44be/tailwind"
-  tag: "tailwind-25d607cf" # managed-by-jenkins-image-tag
+  tag: "tailwind-ce7292ed" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
