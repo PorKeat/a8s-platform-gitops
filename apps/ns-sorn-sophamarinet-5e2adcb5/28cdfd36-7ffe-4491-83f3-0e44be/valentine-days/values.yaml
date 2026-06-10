@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/28cdfd36-7ffe-4491-83f3-0e44be/valentine-days"
-  tag: "valentine-days-20990dd5" # managed-by-jenkins-image-tag
+  tag: "valentine-days-9aed17e6" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
