@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/cfb73df5-b1e6-4a8b-a54b-72890d/camhotel-ui"
-  tag: "camhotel-ui-8a5bc394" # managed-by-jenkins-image-tag
+  tag: "camhotel-ui-ac4f0e74" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
