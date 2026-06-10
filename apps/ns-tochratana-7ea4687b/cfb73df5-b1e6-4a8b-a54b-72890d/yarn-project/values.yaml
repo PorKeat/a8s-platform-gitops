@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/cfb73df5-b1e6-4a8b-a54b-72890d/yarn-project"
-  tag: "yarn-project-4070eb94" # managed-by-jenkins-image-tag
+  tag: "yarn-project-1d6b4059" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
@@ -46,10 +46,10 @@ envJson: |
   []
 
 vault:
-  enabled: true
+  enabled: false
   secretStoreName: "vault-backend"
   secretStoreKind: "ClusterSecretStore"
-  envPath: "monolithic/ns-tochratana-7ea4687b/9a30bff3-eba9-42f4-8f6d-b42abfaeb443/env"
+  envPath: ""
 
 probes:
   mode: "http"
