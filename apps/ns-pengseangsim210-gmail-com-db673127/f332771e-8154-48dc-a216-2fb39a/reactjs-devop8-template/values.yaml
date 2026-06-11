@@ -7,7 +7,7 @@ app:
   containerPort: 80
   servicePort: 80
   domain: "autonomous-istad.com"
-  host: "reactjs-devop8-template-ns-pengseangsim210-gmail-com-db673127.autonomous-istad.com" # managed-by-jenkins-host
+  host: "app.seang.shop" # managed-by-jenkins-host
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/f332771e-8154-48dc-a216-2fb39a/reactjs-devop8-template"
