@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/f332771e-8154-48dc-a216-2fb39a/reactjs-devop8-template"
-  tag: "reactjs-devop8-template-0e6f12d8" # managed-by-jenkins-image-tag
+  tag: "reactjs-devop8-template-9c9313a3" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
