@@ -7,7 +7,7 @@ app:
   containerPort: 80
   servicePort: 80
   domain: "autonomous-istad.com"
-  host: "businessweb-ns-tochratana-7ea4687b.autonomous-istad.com" # managed-by-jenkins-host
+  host: "facebook.tochratana.com" # managed-by-jenkins-host
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/cfb73df5-b1e6-4a8b-a54b-72890d/businessweb"
