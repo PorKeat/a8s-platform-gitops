@@ -7,7 +7,7 @@ app:
   containerPort: 3000
   servicePort: 80
   domain: "autonomous-istad.com"
-  host: "customdomaincamhotelui.autonomous-istad.com" # managed-by-jenkins-host
+  host: "facebook.devith.it.com" # managed-by-jenkins-host
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/45117089-5981-4e14-8afc-99b6dd/camhotel-ui"
