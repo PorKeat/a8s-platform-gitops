@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: ns-tochratana-7ea4687b
-  labels:
-    app.kubernetes.io/managed-by: argocd
-    platform.devops/workspace-namespace: "true"

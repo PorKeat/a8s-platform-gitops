@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: ns-vuthy-tourn-bba33c3e
-  labels:
-    app.kubernetes.io/managed-by: argocd
-    platform.devops/workspace-namespace: "true"
