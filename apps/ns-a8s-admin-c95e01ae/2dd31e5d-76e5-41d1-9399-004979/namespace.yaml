@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ns-a8s-admin-c95e01ae
+  labels:
+    app.kubernetes.io/managed-by: argocd
+    platform.devops/workspace-namespace: "true"
