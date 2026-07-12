@@ -1,0 +1,73 @@
+app:
+  name: "spring-demo"
+  userId: "9a518bce-6186-4629-9e60-3c27e8"
+  projectName: "spring-demo"
+  namespace: "ns-porkeat-b3a2d6eb"
+  framework: "springboot-gradle"
+  containerPort: 8080
+  servicePort: 80
+  domain: "autonomous-istad.com"
+  host: "spring-demo-ns-porkeat-b3a2d6eb.autonomous-istad.com" # managed-by-jenkins-host
+
+image:
+  repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/9a518bce-6186-4629-9e60-3c27e8/spring-demo"
+  tag: "spring-demo-44e27034" # managed-by-jenkins-image-tag
+  pullPolicy: "IfNotPresent"
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  tls:
+    enabled: true
+    secretName: "spring-demo-tls"
+
+imagePullSecrets:
+  - name: "registry-secret"
+
+envJson: |
+  []
+
+vault:
+  enabled: false
+  secretStoreName: "vault-backend"
+  secretStoreKind: "ClusterSecretStore"
+  envPath: ""
+
+probes:
+  mode: "tcp"
+  startup:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    failureThreshold: 24
+  readiness:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    failureThreshold: 3
+  liveness:
+    enabled: true
+    path: "/"
+    initialDelaySeconds: 30
+    periodSeconds: 15
+    failureThreshold: 3
