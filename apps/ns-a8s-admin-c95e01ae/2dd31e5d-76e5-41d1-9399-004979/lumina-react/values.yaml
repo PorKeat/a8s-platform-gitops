@@ -11,7 +11,7 @@ app:
 
 image:
   repository: "goharbor-itp.anajak-khmer.site/deployment-pipeline/2dd31e5d-76e5-41d1-9399-004979/lumina-react"
-  tag: "lumina-react-e3ffe893" # managed-by-jenkins-image-tag
+  tag: "lumina-react-3d1b2e4c" # managed-by-jenkins-image-tag
   pullPolicy: "IfNotPresent"
 
 replicaCount: 1
@@ -46,10 +46,10 @@ envJson: |
   [{"name":"API_URL","value":"https://lumina-api-ns-a8s-admin-c95e01ae.autonomous-istad.com"}]
 
 vault:
-  enabled: false
+  enabled: true
   secretStoreName: "vault-backend"
   secretStoreKind: "ClusterSecretStore"
-  envPath: ""
+  envPath: "monolithic/ns-a8s-admin-c95e01ae/699937f4-cf21-4935-a8a5-f83fec739521/env"
 
 probes:
   mode: "http"
